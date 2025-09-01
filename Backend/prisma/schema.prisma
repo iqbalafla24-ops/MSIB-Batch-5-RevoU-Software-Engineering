@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+//menu
+model menu {
+  id Int @id@default(autoincrement())
+  cakeImg String
+  cakeName String
+  price String
+}
+
+//order
+model consument{
+    id Int @id@default(autoincrement())
+    name String
+    cake String
+    cakeSum Int
+    address String
+}
